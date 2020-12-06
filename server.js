@@ -10,6 +10,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 app.use('/users', routes.User)
+app.use('/auth', routes.Auth)
+app.use('/signin', routes.Signin)
 
 app.listen(process.env.PORT, (error) => {
   if (error) {
